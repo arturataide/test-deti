@@ -1,0 +1,121 @@
+{{ define "main" }}
+{{ partial "jumbotron" (dict "imageUrl" "img/main.jpeg") }}
+<div class="mw7 center ph3 pt4">
+  <h1 class="f4 tc"><strong>FAITES UN DON AUJOURD'HUI!</strong></h1>
+
+  <div class="flex-m mhn3-m mb4 mt4">
+
+    <div class="ph3-m w-30-m">
+      <img src="/img/child1.jpeg" alt="Child" class="db mb2">
+    </div>
+
+    <div class="ph3-m w-70-m">
+      <h3 class="f4 b lh-title mb1">Coordonnées bancaires pour aider à l'aide humanitaire</h3>
+      <br>
+      <ul>
+        <li class="flex-m"><span class="w-30">Bénéficiaire</span> <strong class="w-70">DETI</strong></li>
+        <li class="flex-m"><span class="w-30">IBAN CHF</span> <strong class="w-70">{{ .Params.bank_details.iban
+            }}</strong></li>
+        <li class="flex-m"><span class="w-30">BIC</span> <strong class="w-70">{{ .Params.bank_details.bic }}</strong>
+        </li>
+        <li class="flex-m"><span class="w-30">Adresse</span> <strong class="w-70">{{ .Params.bank_details.address
+            }}</strong></li>
+        <li class="flex-m"><span class="w-30">Banque</span> <strong class="w-70">{{ .Params.bank_details.bank
+            }}</strong></li>
+      </ul>
+      <div class="pv3">
+        <span style="color: red;">Tous les fonds collectés serviront à financer le transport de l'aide humanitaire vers
+          l'Ukraine, à acheter des médicaments et autres produits nécessaires.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex-m mhn3-m mb4">
+
+    <div class="ph3-m w-50-m order-last-m">
+      <img src="/img/image1.jpeg" alt="" class="db mb2">
+    </div>
+
+    <div class="ph3-m w-50-m">
+      <h3 class="f4 b lh-title mb1">Aide humanitaire</h3>
+      <br>
+      <p class="b">Si vous souhaitez vous porter volontaire pour nous aider dans nos actions, merci beaucoup de
+        rejoindre le groupe Telegram suivant: <a style="color: #E64900;" href="https://t.me/volunteers_for_UA_GVA"
+          target="_blank">Volunteers for UA - GVA</a></p>
+
+    </div>
+
+  </div>
+  <div class="flex-m mhn3-m mb4 mt4">
+    <div class="ph3-m w-50-m">
+      De toute <span class="b" style="color: red;">URGENCE</span>, pour les populations blessées sous les bombardements:
+      <ul class="ph2" style="color: red;">
+        {{ range $index, $item := .Params.help_items }}
+        <li>- {{ $item }}</li>
+        {{ end }}
+      </ul>
+    </div>
+    <div class="ph3-m w-50-m">
+      Ce dont nous avons besoin en PRIORITÉ:
+      <ul class="ph2">
+        <li>- des médicaments(<a href="/files/medicines.pdf" target="_blank" style="color: red;">liste</a>)</li>
+        <li>- toutes sortes d'articles liés à la santé et à l'hygiène(<a href="/files/items.pdf" target="_blank"
+            style="color: red;">liste</a>)</li>
+        <li>- de la nourriture non périssable</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="flex-m mhn3-m mb4 mt4">
+
+    <div class="ph3-m w-50-m">
+      <img src="/img/image2.jpeg" alt="Child" class="db mb2">
+    </div>
+
+    <div class="ph3-m w-50-m">
+      <div style="color: red;">
+        <span class="b">TRÈS IMPORTANT:</span><br>
+        Pour accélérer notre travail, merci d'emballer tous les articles dans des boîtes en carton afin de faciliter le
+        stockage et d'indiquer clairement ce que celles-ci contiennent afin de faciliter l'obtention des autorisations
+        et le passage en douane.<br><br>
+        <span class="b">NOUS N'ACCEPTONS PAS LES VÊTEMENTS</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex-m mhn3-m mb4 mt4">
+    <div class="ph3-m w-100">
+      <span style="color: blue;">Vous pouvez déposer les articles aux lieux de dépôt ci-dessous. Merci de contacter
+        d'abord les numéros de téléphone du responsable:</span>
+      <br><br>
+      <span class="b">POINTS DE COLLECTE> CENTRAUX:</span>
+      <ul class="pb4">
+        {{ range $index, $item := .Params.collection_points }}
+        <li>- {{ $item }}</li>
+        {{ end }}
+      </ul>
+
+      <span class="b">POINTS DE DÉPÔT:</span> <br>
+      <ul>
+        {{ range $index, $item := .Params.points_depot }}
+        <li>- {{ $item }}</li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+
+  <div class="flex-m mhn3-m mb4 mt4">
+    <div class="ph3-m w-100">
+      <span class="f4">Coordonnées bancaires pour les dons destinés à l'achat d'èquipement de protection civile (gilets
+        pare-balles, casques):</span>
+        <br><br>
+      <ul>
+        <li class="flex-m"><span class="w-30">Bénéficiaire</span> <strong class="w-70">DETI</strong></li>
+        <li class="flex-m"><span class="w-30">IBAN CHF</span> <strong class="w-70">CH06 0024 3243 1981 5840 K</strong>
+        </li>
+    </div>
+  </div>
+
+
+</div>
+{{ end }}

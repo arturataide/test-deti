@@ -42,6 +42,18 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Values", name: "values", widget: "object", fields: [
               {label: "Heading", name: "heading", widget: string},
               {label: "Text", name: "text", widget: "text"}]}
+      - file: "site/content/Soutenir-lUkraine/_index.md"
+        label: "Soutenir l'Ukraine"
+        fields:
+          - {label: "Bank Details", name: "bank_details", widget: object, fields: [
+          - {label: IBAN, name: iban, widget: string}
+          - {label: BIC, name: bic, widget: string}
+          - {label: Address, name: address, widget: string}
+          - {label: Bank, name: bank, widget: string}]}
+          - {label: Help Items, name: help_items, widget: list, field: {name: item, label: Item, widget: string}}
+          - {label: Points Depot, name: points_depot, widget: list, field: {name: item, label: Item, widget: string}}
+          - {label: Collection Points, name: collection_points, widget: list, field: {name: item, label: Item, widget: string}}
+        name: "Soutenir-lUkraine"
       - file: "site/content/contacts/_index.md"
         label: "Contact Page"
         name: "contacts"
