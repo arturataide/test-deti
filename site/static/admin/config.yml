@@ -26,7 +26,7 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: Title, name: title, widget: string}
           - {label: "Money", name: money, widget: object, fields: [
-            - {label: Amount, name: amount, widget: string}
+            - {label: Amount, name: amount, widget: string},
             - {label: Date, name: date, widget: string}]}
           - {label: Subtitle, name: subtitle, widget: string}
           - {label: Image, name: image, widget: image}
