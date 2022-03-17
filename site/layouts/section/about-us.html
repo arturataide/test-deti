@@ -1,4 +1,5 @@
 {{ define "main" }}
+{{ partial "jumbotron" (dict "imageUrl" "img/main.jpeg") }}
 <div class="mw7 center ph3 pv2">
     {{ .Params.description }}
 </div>
@@ -6,26 +7,39 @@
 <div class="mw7 center ph3 pv2">
     <h1 class="f3">Our team</h1>
     <ul>
-        {{ range $person := .Params.team }}
-            {{ $person.name}}
-            {{ $person.title}}
-            {{ $person.photo}}
-        {{ end }}
+        <div class="flex flex-wrap mhn1 pv2">
+            {{ range $person := .Params.team }}
+            <div class="w-33 ph1-ns center">
+                <img style="display: block;
+                margin-left: auto;
+                margin-right: auto;
+                max-height: 300px;
+                width: 75%;" src="{{ $person.photo }}" alt="{{ $person.name }}">
+                <div class="tc">
+                    <span class="b">{{ $person.name }}</span>
+                    <span style="font-size: 0.84rem;">{{ $person.title }}</span>
+                </div>
+            </div>
+            {{ end }}
+        </div>
     </ul>
 </div>
+<div class="mw6 center ph3 pv2">
+    <img src="{{ .Params.team_photo }}" alt="team_photo">
+</div>
 
-<div class="mw7 center ph3 pv2">
+<div class="mw7 mw7-m center ph3 pv2">
     <h1 class="f3">Statutes, demosntrations and other files</h1>
     <ul>
         {{ range $file := .Params.uploaded_files }}
-        <li><a href="{{ $file.pdf_file }}" target="_blank"><{{ $file.filename }}</a></li>
+        <li>- <a href="{{ $file.pdf_file }}" target="_blank">{{ $file.filename }}</a></li>
         {{ end }}
     </ul>
 </div>
 
 <div>
     {{ with .Site.GetPage "/" }}
-        {{ partial "partners" .Params.partners }}
+    {{ partial "partners" .Params.partners }}
     {{ end }}
 </div>
 {{ end }}

@@ -11,10 +11,17 @@ description: >
 
   Association DETI is an independent association governed by its Statutes and by Articles 60 - 79 of the Swiss Civil Code. The aims are non-lucrative and of public interest. Its Executive Committee is independent from government authorities. It is politically independent and non-denominational.
 uploaded_files:
-  - filename: Statues
+  - filename: Statutes
     pdf_file: img/statuts-association-deti.pdf
+team_photo: img/team.jpeg
 team:
   - name: Maryna Romanenko
-    title: Active Member of the Committee  President
+    title: Active Member of the Committee, President
     photo: img/maryna.jpeg
+  - name: Sebastian Aeschbach
+    title: Active Member of the Committee, Secretary
+    photo: img/sebastian.jpg
+  - name: Simon Brunschwig
+    title: Honorary Member
+    photo: img/simon.jpg
 ---

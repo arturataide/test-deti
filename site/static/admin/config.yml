@@ -148,6 +148,9 @@ collections:
           - label: Description
             name: description
             type: text
+          - label: Team Photo
+            name: team_photo
+            type: image
           - label: Uploaded Files
             name: uploaded_files
             widget: list
