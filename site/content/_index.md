@@ -14,8 +14,10 @@ intro:
   heading: aa
   text: aa
 values:
-  heading: a
-  text: a
+  heading: DETI
+  text: Association soutenue par l'ambassade d'Ukraine en Suisse et la mission
+    permanente de l'Ukraine auprès de l'Office des Nations Unies ainsi que
+    d'autres organisations internationales à Genève.
 partners:
   - img/android-chrome-192x192.png
   - img/android-chrome-192x192.png
