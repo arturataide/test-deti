@@ -1,6 +1,11 @@
-<div class="mw7 center ph3 pv2">
+<div class="mw6 center ph3 pv2 center">
     <hr>
     <h1 class="f3">Our Partners</h1>
-    {{ partial "image-grid" . }}
+    <div class="flex flex-wrap mhn1 items-center">
+        {{ range $index, $item := . }}
+        <div class="w-33 ph1-ns center">
+            <img src="{{ $item }}" alt="partner-{{ $index }}">
+        </div>
+        {{ end }}
+    </div>
 </div>
-{{ .partners }}

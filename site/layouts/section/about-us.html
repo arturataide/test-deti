@@ -1,0 +1,31 @@
+{{ define "main" }}
+<div class="mw7 center ph3 pv2">
+    {{ .Params.description }}
+</div>
+
+<div class="mw7 center ph3 pv2">
+    <h1 class="f3">Our team</h1>
+    <ul>
+        {{ range $person := .Params.team }}
+            {{ $person.name}}
+            {{ $person.title}}
+            {{ $person.photo}}
+        {{ end }}
+    </ul>
+</div>
+
+<div class="mw7 center ph3 pv2">
+    <h1 class="f3">Statutes, demosntrations and other files</h1>
+    <ul>
+        {{ range $file := .Params.uploaded_files }}
+        <li><a href="{{ $file.pdf_file }}" target="_blank"><{{ $file.filename }}</a></li>
+        {{ end }}
+    </ul>
+</div>
+
+<div>
+    {{ with .Site.GetPage "/" }}
+        {{ partial "partners" .Params.partners }}
+    {{ end }}
+</div>
+{{ end }}
