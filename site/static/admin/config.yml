@@ -112,6 +112,14 @@ collections:
             label: Values
             name: values
             widget: object
+          - 
+            field: 
+              label: Partner
+              name: partner
+              widget: image
+            label: "Partners"
+            name: partners
+            widget: list
         file: site/content/_index.md
         label: "Home Page"
         name: home
