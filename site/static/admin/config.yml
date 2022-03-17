@@ -151,24 +151,26 @@ collections:
           - label: Uploaded Files
             name: uploaded_files
             widget: list
-            - label: File Name
-              name: filename
-              widget: string
-            - label: PDF File
-              name: pdf_file
-              widget: file
+            fields:
+              - label: File Name
+                name: filename
+                widget: string
+              - label: PDF File
+                name: pdf_file
+                widget: file
           - label: Team
             name: team
             widget: list
-            - label: Name
-              name: name
-              widget: string
-            - label: Title
-              name: title
-              widget: string
-            - label: Photo
-              name: photo
-              widget: image
+            fields: 
+              - label: Name
+                name: name
+                widget: string
+              - label: Title
+                name: title
+                widget: string
+              - label: Photo
+                name: photo
+                widget: image
     label: Pages
     name: pages
 media_folder: site/static/img
